@@ -1,0 +1,176 @@
+# This file will be read by resetprop
+# Example: Change dpi
+# ro.sf.lcd_density=320
+
+# Force Home in Memory
+
+ro.HOME_APP_ADJ=1
+
+# Mic Fix
+
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.fluence.voicerec=true
+persist.audio.fluence.speaker=false
+use.voice.path.for.pcm.voip=true
+
+# Graphic Performance
+
+view.scroll_friction=10
+video.accelerate.hw=1
+hw3d.force=1
+hw2d.force=1
+hwui.render_dirty_regions=false
+hwui.disable_vsync=true
+force_hw_ui=true
+ro.fb.mode=1
+ro.product.gpu.driver=1
+ro.sf.compbypass.enable=0
+ro.vold.umsdirtyratio=20
+ro.config.enable.hw_accel=true
+ro.config.disable.hw_accel=false
+dev.pm.dyn_samplingrate=1
+dalvik.vm.dexopt-flags=m=y
+dalvik.vm.checkjni=false
+dalvik.vm.check-dex-sum=false
+dalvik.vm.debug.alloc=0
+dalvik.vm.deadlock-predict=off
+dalvik.vm.verify-bytecode=false
+dalvik.vm.usejit=true
+dalvik.vm.usejitprofiles=true
+debug.hwui.render_dirty_regions=false
+debug.composition.type=gpu
+debug.egl.swapinterval=-60
+debug.egl.profiler=1
+debug.egl.hw=1
+debug.enabletr=true
+debug.overlayui.enable=1
+debug.performance.tuning=1
+debug.qc.hardware=trule
+debug.qctwa.statusbar=1
+debug.qctwa.preservebuf=1
+debug.sf.hw=1
+debug.sqlite.journalmode=WAL
+debug.sqlite.syncmode=1
+debug.gr.swapinterval=1
+debug.gr.numframebuffers=3
+persist.sys.composition.type=gpu
+persist.sampling_profiler=0
+persist.service.pcsync.enable=0
+persist.service.lgospd.enable=0
+persist.sys.purgeable_assets=1
+persist.sys.ui.hw=1
+persist.sys.use_16bpp_alpha=1
+persist.sys.NV_FPSLIMIT=70
+persist.sys.NV_POWERMODE=1
+persist.sys.NV_PROFVER=15
+persist.sys.NV_STEREOCTRL=0
+persist.sys.NV_STEREOSEPCHG=0
+persist.sys.NV_STEREOSEP=20
+
+# Touch Screen Improved
+
+touch.deviceType=touchScreen
+touch.orientationAware=1
+touch.size.calibration=diameter
+touch.size.scale=1
+touch.size.bias=0
+touch.size.isSummed=0
+touch.pressure.calibration=amplitude
+touch.pressure.scale=0.001
+touch.orientation.calibration=none
+touch.distance.calibration=none
+touch.distance.scale=0
+touch.coverage.calibration=box
+touch.gestureMode=spots
+MultitouchSettleInterval=1ms
+MultitouchMinDistance=1px
+TapInterval=1ms
+TapSlop=1px1
+
+#Battery Saver
+
+wifi.supplicant_scan_interval=300
+persist.wpa_supplicant.debug=false
+pm.sleep_mode=1
+power.saving.mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.power_collapse=1
+ro.config.hw_power_saving=1
+
+#Data Speed Tweaks
+# Must be supported by network - AT&T supports this. Allows downloading and talking at the same time.
+ro.ril.enable.dtm=1
+# gprs (edge) speed settings
+ro.ril.gprsclass=34
+# HSPA+ Download speed settings by category. Cat 28 is the highest
+ro.ril.hsdpa.category=28
+# HSPA+ Upload speed settings by category. Cat 9 is highest, 7 seems to work just fine.
+ro.ril.hsupa.category=7
+# setting to enable hspa+ for the upload and download
+ro.ril.hsxpa=5
+# Other Setting
+ro.ril.hep=1
+ro.ril.def.agps.feature=1
+ro.ril.enable.a53=1
+ro.ril.enable.3g.prefix=1
+
+#buffer tweaks
+net.tcp.buffersize.default=6144,87380,1048576,6144,87380,524288
+net.tcp.buffersize.wifi=524288,1048576,2097152,524288,1048576,2097152
+net.tcp.buffersize.umts=6144,87380,1048576,6144,87380,524288
+net.tcp.buffersize.edge=6144,87380,524288,6144,16384,262144
+net.tcp.buffersize.gprs=6144,87380,1048576,6144,87380,524288
+net.tcp.buffersize.evdo=6144,87380,1048576,6144,87380,1048576
+net.tcp.buffersize.evdo_a=6144,87380,1048576,6144,87380,1048576
+net.tcp.buffersize.evdo_b=6144,87380,1048576,6144,87380,1048576
+net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576
+net.tcp.buffersize.hspa=6144,87380,524288,6144,16384,262144
+net.tcp.buffersize.hsupa=6144,87380,1048576,6144,87380,1048576
+net.tcp.buffersize.lte=524288,1048576,2097152,524288,1048576,2097152
+
+persist.data_netmgrd_mtu=1500
+
+# Other Tweak
+
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.shared=speed
+profiler.launch=false
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+profiler.debugmonitor=false
+profiler.hung.dumpdobugreport=false
+MIN_HIDDEN_APPS=false
+MIN_RECENT_TASKS=false
+APP_SWITCH_DELAY_TIME=false
+vidc.debug.level=0
+vidc.debug.perf.mode=2
+ro.floatingtouch.available=1
+
+# Disable the error checking
+ro.kernel.android.checkjni = 0 
+ro.kernel.checkjni=0
+
+# Disables the sending of usage data
+ro.config.nocheckin = 1 
+
+# Better response and speed
+windowsmgr.max_events_per_sec=300
+ro.max.fling_velocity=13800 
+ro.min.fling_velocity=10500
+
+# Disable stats logging & monitoring
+debug.atrace.tags.enableflags=0
+profiler.force_disable_ulog=true
+profiler.force_disable_err_rpt=true
+profiler.force_disable_ulog=1
+profiler.force_disable_err_rpt=1
+ro.config.nocheckin=1
+debugtool.anrhistory=0
+ro.com.google.locationfeatures=0
+ro.com.google.networklocation=0
+profiler.debugmonitor=false
+profiler.launch=false
+profiler.hung.dumpdobugreport=false
+persist.service.pcsync.enable=0
+persist.service.lgospd.enable=0
+persist.sys.purgeable_assets=1
